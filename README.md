@@ -1,4 +1,3 @@
-//import java.util.String;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,72 +24,235 @@ public class IksOks {
 		}
 		System.out.println();
 	}
-	
-	Random rnd = new Random();
+
+		
+		
+	//Random rnd = new Random();
 	int max =2, min = 0;
 	int rand, rand2; //= (int)(Math.random()*(min-max+1)+min);
 	
-	char X = 'X';
+	//char X = 'X';
 	for (int i =0; i<8; i++){
 	
 		for(int j =0; j<8; j++)
 		{
+			
+			for (int y=0; y<3;y++) {
+				for (int u=0;u<3;u++) {
+				
+			if (y == u || matrica[y][u] == 'o')
+			{	
+			System.out.println("Pobedio je racunar!");	
+			break;
+			}
+			else if (u==2 ||  y == 0 || y== 1 ||y== 2 || matrica[y][u] == 'o')
+			{
+				System.out.println("Pobedio je racunar!");
+				break;
+			}
+			else if (y==0 || u == 0 || u== 1 ||u== 2 ||matrica[y][u] == 'o')
+			{
+				System.out.println("Pobedio je racunar!");
+				break;
+			}
+			else if (u==0 || y==0 || y==1 || y==2 ||matrica[y][u] == 'o')
+			{
+				System.out.println("Pobedio je racunar!");
+				break;
+			}
+			else if (y==2 || u==0 || u==1 || u==2 ||matrica[y][u] == 'o')
+			{
+				System.out.println("Pobedio je racunar!");
+				break;
+			}
+			else if (u==0 || y==0 || y==1 || y==2 ||matrica[y][u] == 'o')
+			{
+				System.out.println("Pobedio je racunar!");
+				break;
+			}
+			else if (y+u == matrica.length ||matrica[y][u] == 'o')
+			{
+				System.out.println("Pobedio je racunar!");
+				break;
+			}
+			
+
+			else if (y == u || matrica[y][u] == 'x')
+			{	
+			System.out.println("Vi ste pobednik!");	
+			break;
+			}
+			else if (u==2 ||  y == 0 || y== 1 ||y== 2 || matrica[y][u] == 'x')
+			{
+				System.out.println("Vi ste pobednik!");
+				break;
+			}
+			else if (y==0 || u == 0 || u== 1 ||u== 2 ||matrica[y][u] == 'x')
+			{
+				System.out.println("Vi ste pobednik!");
+				break;
+			}
+			else if (u==0 || y==0 || y==1  || y==2  ||matrica[y][u] == 'x')
+			{
+				System.out.println("Vi ste pobednik!");
+				break;
+			}
+			else if (y==2 || u==0 || u==1  || u==2  ||matrica[y][u] == 'x')
+			{
+				System.out.println("Vi ste pobednik!");
+				break;
+			}
+			else if (u==0 || y==0 || y==1  || y==2  ||matrica[y][u] == 'x')
+			{
+				System.out.println("Vi ste pobednik!");
+				break;
+			}
+			else if (y+u == matrica.length  ||matrica[y][u] == 'x')
+			{
+				System.out.println("Vi ste pobednik!");
+				break;
+			}
+			else break;
+			
+		 }
+		}
+			
+		
+			
 			int b = input.nextInt();
 			switch (b) {
 			
 			case 1:
-				matrica[0][0] = 'x';
+				if(matrica[0][0] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[0][0] = 'o';
+					
+				}
+				else {matrica[0][0] = 'x';}
 				break;
 			case 2:
-				matrica[0][1] = 'x';
+				if(matrica[0][1] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[0][1] = 'o';
+					
+				}
+				else {matrica[0][1] = 'x';}
 				break;
 			case 3:
-				matrica[0][2] = 'x';
+				if(matrica[0][2] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[0][2] = 'o';
+					
+				}
+				else {matrica[0][2] = 'x';}
 				break;
 			case 4:
-				matrica[1][0] = 'x';
+				if(matrica[1][0] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[1][0] = 'o';
+					
+				}
+				else {matrica[1][0] = 'x';}
 				break;
 			case 5:
-				matrica[1][1] = 'x';
+				if(matrica[1][1] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[1][1] = 'o';
+					
+				}
+				else {matrica[1][1] = 'x';}
 				break;
 			case 6:
-				matrica[1][2] = 'x';
+				if(matrica[1][2] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[1][2] = 'o';
+					
+				}
+				else {matrica[1][2] = 'x';}
 				break;
 			case 7:
-				matrica[2][0] = 'x';
+				if(matrica[2][0] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[2][0] = 'o';
+					
+				}
+				else {matrica[2][0] = 'x';}
 				break;
 			case 8:
-				matrica[2][1] = 'x';
+				if(matrica[2][1] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[2][1] = 'o';
+					
+				}
+				else {matrica[2][1] = 'x';}
 				break;
 			case 9:
-				matrica[2][2] = 'x';
+				if(matrica[2][2] == 'o')
+				{
+					System.out.println("Vec je zauzeto polje! \n");
+					matrica[2][2] = 'o';
+					
+				}
+				else {matrica[2][2] = 'x';}
 				break;
 			default:
 				System.out.println("Uneli ste pogresan broj! \n");
 				break;
-				}
+				
+				
+			}
+		
+			
 			
 			for (int random =0; random<1; random++)
 			{
 				rand = (int)(Math.random()*(max-min+1)+min);
 				rand2 = (int)(Math.random()*(max-min+1)+min);
-				System.out.println(rand + rand2);
-				if (rand<0 || rand > 2 || rand2 < 0 || rand2 >2)
+				
+				if (matrica[rand][rand2] == 'x')
 				{
-					break;
+				 if (matrica[rand][rand2] == 'o') {
+					rand = (int)(Math.random()*(max-min+1)+min);
+					rand2 = (int)(Math.random()*(max-min+1)+min);
 				}
-				else if (matrica[rand][rand2] == 'x')
-				{
-					break;
 				}
-				else if (matrica[rand][rand2] == '-')
+				else if (matrica[rand][rand2] == 'o')
 				{
+					if(matrica[rand][rand2] == 'x'){
+						
 					
-					matrica[rand][rand2] = 'o';
-					
+					rand = (int)(Math.random()*(max-min+1)+min);
+					rand2 = (int)(Math.random()*(max-min+1)+min);
+					}
 				}
+				
+				else if (matrica[rand][rand2] == 'o')
+				{
+					if(matrica[rand][rand2] == 'x'){
+						
+					
+					rand = (int)(Math.random()*(max-min+1)+min);
+					rand2 = (int)(Math.random()*(max-min+1)+min);
+					}
+				}
+				
+				
+				
+				else matrica[rand][rand2] = 'o';
+				
+				
 			}
 			
+			
+		
 			
 			for (int k=0; k<3; k++) {
 				for(int l =0; l<3; l++)
@@ -101,11 +263,9 @@ public class IksOks {
 				System.out.println();
 			}
 			
-		}
+				}
 		
-	}
 	
-	
-	
-}
+  }
+ }
 }
